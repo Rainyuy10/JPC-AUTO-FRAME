@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPC AUTO FRAME</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/Logo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <h1>
+      <img src="images/Logo.png" alt="Logo" class="logo"> JPC AUTO FRAME
+    </h1>
+    <div class="controls">
+      <label for="image-upload">Upload Images (Max 40):</label>
+      <input type="file" id="image-upload" multiple accept="image/*">
+      <label for="frame-select">Choose Frame:</label>
+      <select id="frame-select">
+        <option value="frame1">Frame 1</option>
+        <option value="frame2">Frame 2</option>
+        <option value="frame3">Frame 3</option>
+      </select>
+      <button id="crop-square">Force Crop to Square</button>
+    </div>
+    <div class="workspace">
+      <div class="preview">
+        <h2>Preview</h2>
+        <canvas id="preview-canvas"></canvas>
+      </div>
+    </div>
+    <button id="download-btn">Download All Framed Images</button>
+    <!-- Notification Element -->
+    <div id="notification" class="notification" style="display: none;"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
